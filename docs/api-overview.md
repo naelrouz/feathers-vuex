@@ -156,7 +156,7 @@ const feathersClient = feathers()
 export default feathersClient
 
 // Setting up feathers-vuex
-const { makeServicePlugin, makeAuthPlugin, BaseModel, models } = feathersVuex(
+const {FeathersVuex, makeServicePlugin, makeAuthPlugin, BaseModel, models } = feathersVuex(
   feathersClient,
   {
     serverAlias: 'api', // optional for working with multiple APIs (this is the default value)
@@ -165,7 +165,7 @@ const { makeServicePlugin, makeAuthPlugin, BaseModel, models } = feathersVuex(
   }
 )
 
-export { makeAuthPlugin, makeServicePlugin, BaseModel, models }
+export {FeathersVuex, makeAuthPlugin, makeServicePlugin, BaseModel, models }
 ```
 
 ### Service Plugins
